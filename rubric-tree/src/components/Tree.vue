@@ -18,62 +18,6 @@
 
     </div>
     <div v-if="newData.length" class="card">
-<!--        <div class="flex items-center">-->
-<!--          <div v-if="item.children.length" @click="item.showSection = !item.showSection"-->
-<!--               class="rounded-full hover:bg-slate-500 size-5 flex justify-center items-center"-->
-<!--               :class="{'rotate-90': item.showSection}"-->
-<!--          >-->
-<!--            <i class="pi pi-chevron-right" style="font-size: 12px"></i>-->
-<!--          </div>-->
-<!--          <div v-else class="size-5"></div>-->
-<!--          <input v-model="item.value" :id="item.id" type="checkbox" :value="true"-->
-<!--                 @change="sumSelectedCounts(item.count, item.value)" class="mr-2">-->
-<!--          <a :href="item.url" class="hover:text-white hover:underline">-->
-<!--            <p>-->
-<!--              {{ item.title }}-->
-<!--            </p>-->
-<!--          </a>-->
-<!--        </div>-->
-<!--        <div v-if="item.children.length && item.showSection">-->
-<!--          <div v-for="(i, index) in item.children"-->
-<!--               :key="index + new Date().getTime()"-->
-<!--               class="ml-10"-->
-<!--          >-->
-<!--            <div class="flex items-start">-->
-<!--              <div v-if="i?.children" @click="i.showSection = !i.showSection"-->
-<!--                   :class="{'rotate-90': i.showSection}">-->
-<!--                <i class="pi pi-chevron-right" style="font-size: 12px"></i>-->
-<!--              </div>-->
-<!--              <input v-model="i.value" :id="i.id" type="checkbox" :value="true"-->
-<!--                     @change="sumSelectedCounts(i.count, i.value)" class="mx-2 mt-[5px]">-->
-<!--              <a :href="i.url" class="text-start">-->
-<!--                <p class="inline-block w-full max-w-[300px]">-->
-<!--                  {{ i.title }}-->
-<!--                </p>-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div v-if="i.children.length && i.showSection">-->
-<!--              <div v-for="(e, index) in i.children"-->
-<!--                   :key="index + new Date().getTime()"-->
-<!--                   class="ml-10"-->
-<!--              >-->
-<!--                <div class="flex items-start">-->
-<!--                  <div v-if="e?.children.length" @click="e.showSection = !e.showSection"-->
-<!--                       :class="{'rotate-90': e.showSection}">-->
-<!--                    <i class="pi pi-chevron-right" style="font-size: 12px"></i>-->
-<!--                  </div>-->
-<!--                  <input v-model="e.value" :id="e.id" type="checkbox" :value="true"-->
-<!--                         @change="sumSelectedCounts(e.count, e.value)" class="mx-2 mt-[5px]">-->
-<!--                  <a :href="e.url" class="text-start">-->
-<!--                    <p class="inline-block w-full max-w-[300px]">-->
-<!--                      {{ e.title }}-->
-<!--                    </p>-->
-<!--                  </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
       <NestedComponent :items="newData" @change-data="sumSelectedInsideElements" />
     </div>
     <div v-else class="w-full h-full min-h-[424px] flex justify-center items-center">

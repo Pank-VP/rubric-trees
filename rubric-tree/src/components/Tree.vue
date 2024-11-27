@@ -11,8 +11,8 @@
           Показать:
         </p>
         <button @click="changeParams">
-          <span v-if="allowEmpty">Больше рубрик</span>
-          <span v-else>Меньше рубрик</span>
+          <span v-if="allowEmpty">Меньше рубрик</span>
+          <span v-else>Больше рубрик</span>
         </button>
       </div>
 

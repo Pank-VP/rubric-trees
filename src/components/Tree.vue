@@ -44,9 +44,6 @@ const getData = async () => {
     const response = await fetch(`https://www.klerk.ru/yindex.php/v3/event/rubrics?allowEmpty=${allowEmpty.value}`)
     nodes.value = await response.json()
     newData.value = Array.from(nodes.value)
-    // nodes.value.forEach(i => newData.value.push(i))
-    // newData.value = nodes.value.map(i => i)
-    console.log(newData.value)
     createNewData(newData.value)
   } catch (e) {
     console.log(e)
